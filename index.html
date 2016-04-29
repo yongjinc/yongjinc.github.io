@@ -45,7 +45,7 @@
 				<div class="intro wow pulse animated heartbeat" data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s">
 					<p>任C#.net软件工程师</p>
 				</div>
-				<p>参与系统功能流程优化及扩展，负责微信开发.
+				<p>参与系统功能流程优化及扩展，负责微信开发<br/>elastic搜索,数据抓取
 					<!--<a id='Obj' style="display: inline-block;" href="javascript:;">Object</a>--></p>
 				<p><img src="asset/hznz.jpg" style="width: 25%" /></p>
 				<br />
@@ -56,9 +56,9 @@
 					主参与项目：<a href="http://www.haipiquan.cn/" target="_blank">海皮圈,互联网供应链平台运营</a>
 					<br /><a href="http://hcp.21688.com/" target="_blank">易带易路,中国好产品源头供应链</a>
 				</p>
-				---------------------------------------------------------------------------------
-				<div id='jview' style='text-align: left;padding-bottom:20px'>
-					优美的
+				<div style="overflow: hidden;height: 20px;">---------------------------------------------------------------------------------</div>
+				<div id='jview' style='text-align: left;padding-bottom:20px;max-width: 500px;'>
+					关于更多
 					<div style="position: absolute;left: -1em;cursor: pointer;font-family: monospace;font-size:1.1em;white-space: pre-wrap;">-</div> JSON：<a href="javascript:;" id="openjson" style="margin-left:120px;">...展开/关闭</a>
 					<div id="json"></div>
 				</div>
@@ -127,7 +127,7 @@
 				<p class="wow fadeInRight">一打开电脑就Baidu/Google,这是最好的老师......</p>
 				<p class="wow flipInY">蹦达蹦达w3cschool菜鸟教程</p>
 				<div class="icons wow fadeInUp">
-					<a href="https://github.com/" title="github">
+					<a href="https://yongjinc.github.io" title="github">
 						<i class="fa fa-github"></i>
 						<strong>Github</strong>
 					</a>
@@ -334,12 +334,14 @@
 						6: "与其它软件工程师协作工作,协助工程管理人保证项目的质量",
 					},
 					"业绩": {
-						1:"和队友重写orm框架",
+						1: "和队友重写orm框架",
 						2: "完成微信服务号开发，杭州女装网，8月份启动至总体完成开发，用户大致3万",
 						3: "微信服务号扩展投票功能，吸粉15万，针对四季青2015十佳女装评选",
 						4: "基于微信框架，修改并构建微店开发框架，实现API对接",
 						5: "女装网主要淘宝API对接",
-						6: "手持PDA物联网扫描枪，针对公司退货等扫描流程安卓应用开发"
+						6: "手持PDA物联网扫描枪，针对公司退货等扫描流程安卓应用开发",
+						7: "替换原有搜索模块，改用基于lucene的elasticsearch分布式全文搜索",
+						8: "业务需求，分析抓取周边男装数据(男装基地、星座等市场)"
 					}
 				},
 				"原本就职": {
@@ -347,17 +349,23 @@
 					"行业": "私营·民营企业 | 500-1000人  | 互联网/电子商务",
 					"链接": "http://www.zibolan.com/",
 					"项目版本管理工具":"git",
-					"工作描述": ["杭州分公司，C#.Net软件工程师 (兼网管)",
-						"项目版本管理工具git，团队管理禅道",
-						"参与电商供应链平台开发：F2B项目（三层架构），结算中心（mvc架构），", "消息机（winform，独自），sso单点登录（mvc架构，独自）",
-						"案例：易带易路http://www.21688.com/，", "海宁海皮圈：http://www.haipiquan.cn/，", "广东虎门圈：http://www.humenquan.com/"
-					].join("\n")
+					"团队管理应用":"禅道",
+					"职责":"杭州分公司，C#.Net软件工程师 (兼网管)",
+					"工作描述":{
+						"电商供应链平台开发":"F2B项目（三层架构），结算中心（mvc架构），仓储系统，OA",
+						"个人项目":"消息机（winform），sso单点登录（mvc架构）",
+						"案例":{
+							"易带易路":"http://www.21688.com/", 
+							"海宁海皮圈":"http://www.haipiquan.cn/", 
+							"广东虎门圈":"http://www.humenquan.com/"
+						}
+					}
 				}
 			};
 			$(function() {
 				$("#json").JSONView(json, {
 					collapsed: true,
-					nl2br: true,
+					snl2br: true,
 					recursive_collapser: true
 				});
 				$("#openjson").click(function() {
